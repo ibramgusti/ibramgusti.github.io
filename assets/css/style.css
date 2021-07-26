@@ -1,0 +1,519 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+html, body{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+/* Start Navigation */
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    width: 100%;
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+}
+
+.nav-links a {
+    color:white ;
+    text-decoration:none ;
+    position: relative;
+    letter-spacing: 2px;
+    font-weight: 900;
+    font-size: 13px;
+}
+
+.nav-links a::after{
+    content: "";
+    position: absolute;
+    border-radius: 5px;
+    background-color: #FFC947;
+    height: 3px;
+    width: 0%;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover{
+    color: #28ABB9;
+    transition: 0.9s;
+}
+
+.nav-links a:hover::after{
+    width: 100%;
+}
+
+
+.navigation{
+    position: absolute;
+    width: 100%;
+    left: 500px;
+}
+
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    border-radius: 3px;
+    background-color: black;
+    margin: 5px;
+}
+
+/* End Navigation */
+
+/* Start Home */
+
+#home{
+    background-color: #141E61;
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav{
+    background-color: #0F044C;
+    color: white;
+}
+
+.image-malang{
+    display: flex;
+    justify-content: center;
+}
+
+.image-malang img {
+    flex-basis: 50%;
+    width: 100%;
+    max-width: 650px;
+    max-height: 500px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.zoom {
+    animation: zoomanimation 0.5s linear 1;
+}
+
+@keyframes zoomanimation {
+    0%{
+        transform: translateX(50px);
+        opacity: 0.75;
+    }100%{
+        transform: translateX(0);
+        opacity: 1;
+    } 
+}
+
+.logo {
+    position: relative;
+    right: 215px;
+    letter-spacing: 1px;
+    font-size: 20px;
+}
+
+.landing{
+    padding-top:100px;
+    flex-basis: 50%;
+    position: relative;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.landing h1, .landing p, .landing h4{
+    margin-left: 50px;
+    margin-bottom: 0px;
+}
+
+.landing p {
+    font-style: italic;
+    width: 400px;
+}
+
+.landing h1 {
+    font-size: 40px;
+}
+
+.landing ul {
+    bottom: 30px;
+    position: absolute;
+    padding-inline-start: 50px;
+}
+
+.landing ul li {
+    display: inline-block;
+    list-style: none;
+    background-color: #787A91;
+    border-radius: 50%;
+    margin-right: 15px;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}
+
+.landing .active{
+    transition: ease-in 0.2s;
+    background-color: #28ABB9;
+}
+
+.card{
+    display: flex;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: #EEEEEE;
+    margin: 0px 30px 0 30px;
+}
+
+/* End Home */
+
+
+/* Start Sejarah */
+
+#sejarah{
+    display: flex;
+    background-color: #EEEEEE;
+    justify-content: center;
+    align-items: center;
+    height: 900px;
+}
+
+.sejarah{
+    margin: 0px 75px 0 75px;
+}
+
+.sejarah h2 {
+    text-align: center;
+}
+
+.container {
+    position: relative;
+}
+
+.container__line {
+    border-right: 2px solid #185ADB;
+    left: 16px;
+    position: absolute;
+    top: 0px;
+    height: 100%;
+}
+
+.container__items {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.container__item {
+    margin-bottom: 8px;
+}
+
+.container__top {
+    align-items: center;
+    display: flex;
+}
+
+.container__circle {
+    background-color: #185ADB;
+    border-radius: 9999px;
+    height: 32px;
+    width: 32px;
+}
+
+.container__title {
+    margin-left: 5px;
+    flex: 1;
+}
+
+.container__desc {
+    margin-left: 48px;
+    text-align: justify;
+    text-indent: 3em;
+}
+
+/* End Sejarah */
+
+/* Start Tri Bina */
+
+#tribinacita{
+    background-color: #141E61;
+    display: flex;
+    height: 1000px;
+    align-items: center;
+    justify-content: center;
+}
+
+.tribinacita {
+    margin: 50px 75px 0 75px;
+    color: white;
+}
+
+.tribinadesc p, .tribinadesc h2{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.tribinadesc ol {
+    padding-left: 450px;
+    justify-content: center;
+    align-items: center;
+}
+
+.pendidikan,.industri, .pariwisata {
+    display: flex;
+    margin : 30px 0;
+}
+
+.industri {
+    flex-direction: row-reverse;
+}
+
+.pendidikan_img img, .industri_img img , .pariwisata_img img{
+    max-width: 300px;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+    max-height: 300px;
+}
+
+.pendidikan_img img , .pariwisata_img img {
+    margin-right: 20px;
+}
+
+.industri_img {
+    margin-left: 20px;
+}
+
+.pendidikan_desc p, .industri_desc p, .pariwisata_desc p {
+    text-indent: 3em;
+    text-align: justify;
+}
+/* End Tri Bina */
+
+/* Start Pariwisata */
+
+#wisata{
+    display: flex;
+    background-color: #EEEEEE;
+    height: 900px;
+}
+
+.pariwisata_div{
+    margin: 50px 75px 0 75px;
+}
+
+.wisata_desc{
+    text-align: center;
+
+}
+
+.wisata-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.wisata-img{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-basis: 25%;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    align-items: center;
+}
+
+
+.img-desc{
+    position: absolute;
+    color: #EEEEEE;
+    max-height: 300px;
+    max-width: 300px;
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+    background: linear-gradient(to bottom, rgba(20, 30, 97, 0.7), rgba(24, 90, 219, 0.9)) ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.3);
+}
+
+.img-desc > *{
+    transform: translateY(30px);
+    transition: 0.3s;
+}
+
+.img-desc:hover{
+    opacity: 1;
+}
+
+.img-desc:hover > *{
+    transform: translateY(0);
+}
+
+.wisata-img img {
+    max-width: 300px;
+    border-radius: 10px;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    object-position: center;
+    max-height: 300px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+}
+/* End Pariwisata */
+
+/* Start About me */
+
+#aboutme{
+    background-color: #141E61;
+    height: 700px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.about-me{
+    display: flex;
+    margin: 50px 75px 0 75px;
+}
+
+.my-bio{
+    flex-basis: 50%;
+    border-radius: 20px;
+    padding: 20px;
+    max-height: 300px;
+    color: white;
+}
+
+.my-bio h1{
+    letter-spacing: 2.5px;
+    font-size: xx-large;
+    margin: 0;
+}
+
+.my-bio strong{
+    color: #FFC947;
+}
+
+.my-bio img{
+    max-height: 20px;
+}
+
+.my-email{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: smaller;
+}
+
+.my-email img{
+    filter: invert(1);
+    margin-right: 10px;
+}
+
+.my-email p {
+    margin: 0;
+}
+
+.my-photo{
+    flex-grow: 2;
+    display: flex;
+    justify-content: center;
+}
+
+.title-about{
+    text-align: center;
+    color: white;
+}
+
+.my-photo img{
+    object-fit: cover;
+    object-position: center;
+    max-height: 600px;
+    max-width: 400px;
+}
+
+
+/* End About me */
+
+/* Start Footer */
+
+.penutup{
+    background-color: #0F044C;
+    color: white;
+    text-align: center;
+    max-height: 300px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.penutup p {
+    font-size: small;
+}
+
+.icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icons img {
+    max-height: 20px;
+    margin: 0px 10px 0px 10px;
+    filter: brightness(0) invert(1);
+    cursor: pointer;
+}
+/* End Footer */
+
+#upbutton{
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border:0;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    background-color: #FFC947;
+    opacity: 0.3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+}
+
+#upbutton:hover{
+    opacity: 1;
+    transition: 0.5s;
+}
+
+#upbutton img {
+    width: 25px;
+    margin-bottom: 2px;
+}
